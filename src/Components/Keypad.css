@@ -1,0 +1,36 @@
+.keypad {
+  align-items: stretch;
+  box-shadow: 0 1.5rem 3rem rgba(200, 0, 245, 0.15);
+  display: flex;
+  flex-flow: column;
+  height: 230px;
+  justify-content: space-evenly;
+  width: 270px;
+}
+
+.keypad div {
+  display: flex;
+  height: 46px;
+  justify-content: space-evenly;
+}
+
+.keypad div:last-child button {
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+button {
+  background-color: #f98635;
+  border: none;
+  color: currentColor;
+  flex-grow: 1;
+  text-decoration: none;
+}
+
+.button:active {
+  transform: scale(0.98) translateY(-2px);
+}
+
+.button:hover {
+  transform: scale(1.02) translateY(-4px);
+} 

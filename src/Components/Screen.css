@@ -1,0 +1,14 @@
+.screen {
+  align-items: center;
+  background-color: white;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  color: black;
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: x-large;
+  height: 50px;
+  padding-right: 15px;
+  text-align: end;
+  width: 270px;
+}
