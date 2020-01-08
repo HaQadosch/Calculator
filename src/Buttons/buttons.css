@@ -1,0 +1,83 @@
+section#pad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: 
+    "AC    .     .       div"
+    "seven eight nine    mult"
+    "four  five  six     minus"
+    "one   two   three   plus"
+    ".     zero  decimal equal";
+  grid-gap: 10px;
+}
+
+button#clear {
+  grid-area: AC;
+}
+button#decimal {
+  grid-area: decimal;
+}
+button#divide {
+  grid-area: div;
+}
+button#multiply {
+  grid-area: mult;
+}
+button#substract {
+  grid-area: minus;
+}
+button#add {
+  grid-area: plus;
+}
+button#equals {
+  grid-area: equal;
+}
+button#zero {
+  grid-area: zero;
+}
+button#one {
+  grid-area: one;
+}
+button#two {
+  grid-area: two;
+}
+button#three {
+  grid-area: three;
+}
+button#four {
+  grid-area: four;
+}
+button#five {
+  grid-area: five;
+}
+button#six {
+  grid-area: six;
+}
+button#seven {
+  grid-area: seven;
+}
+button#eight {
+  grid-area: eight;
+}
+button#nine {
+  grid-area: nine;
+}
+
+button {
+  border-radius: 12px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--whisper);
+  border: 1px solid var(--border);
+  box-shadow: -6px -6px 26px 0 var(--clear), 6px 6px 16px 0 var(--dark);
+}
+
+.negative::after {
+  display: block;
+  content: '';
+  width: 31px;
+  height: 3px;
+  color: red;
+  border-radius: 25px;
+  background-color: red;
+  border: 1px solid red;
+}

@@ -1,22 +1,22 @@
-html {
-  background-color: #5f45bb;
-  background-image: linear-gradient(to bottom right, #180cac, #d054e4);
-  color: #ffffff;
-  font-family: 'Quicksand', sans-serif;
-  font-size: 16px;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  min-height: 100vh;
-/*   min-width: 300px; */
-  overflow-x: hidden;
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'pad display';
+
+  border-radius: 12px;
+  background-color: var(--whisper);
+  border: 1px solid var(--border);
+  box-shadow: -6px -6px 26px 0 var(--clear), 6px 6px 16px 0 var(--dark);
 }
 
-
-#root {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  min-height: 50vh;
+#display_history {
+  grid-area: display;
 }
 
+#pad {
+  grid-area: pad;
+}
+
+main > section {
+  margin: 10px;
+}

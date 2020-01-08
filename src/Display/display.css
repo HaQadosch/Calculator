@@ -1,0 +1,42 @@
+section#display_history {
+  display: grid;
+  grid-template-rows: 2fr 1.1em 1fr;
+  place-items: end;
+}
+
+section#display {
+  place-self: stretch;
+
+  background-color: var(--whisper);
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  box-shadow: -6px -6px 26px 0 var(--clear), 6px 6px 16px 0 var(--dark);
+
+  display: grid;
+  padding-right: 10px;
+}
+
+section#display > p {
+  place-self: center end;
+  font-size: 2em;
+  font-weight: lighter;
+}
+
+ #tempTotal {
+  justify-self: start;
+  align-self: end;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  color: gray;
+  margin-left: 10px;
+ }
+
+section#history > ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+
+  font-size: 1.1em;
+  color: gray;
+}
