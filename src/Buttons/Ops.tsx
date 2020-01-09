@@ -25,7 +25,7 @@ const OperatorButton: React.FC<IOperatorButton> = ({ id, operator }) => {
   const { tempValue } = useSelector(({ temp }: RootState) => temp)
 
   return (
-    <button id={ id } onClick={ handleClick } className={ id === 'substract' && status === Status.MaybeNegative ? 'negative' : '' }>
+    <button id={ id } onClick={ handleClick } className={ id === 'subtract' && status === Status.MaybeNegative ? 'negative' : '' }>
       { operator }
     </button>
   )
@@ -61,14 +61,10 @@ const OperatorButton: React.FC<IOperatorButton> = ({ id, operator }) => {
         break
       case Status.MaybeNegative: // Just after pressing the - button.
         // That was just a mistake, overwrite with the last operator.
-        if (operator === '-') {
-          // becomes a substract operation.
-          dispatch(setState({ state: Status.OperatorInput }))
-        } else {
-          dispatch(replaceHistory({
-            operator
-          }))
-        }
+        dispatch(setState({ state: Status.OperatorInput }))
+        dispatch(replaceHistory({
+          operator
+        }))
         break
       case Status.TotalInput: // Just after the end of the previous evaluation.
         // Using the result of the previous calculation.
@@ -97,6 +93,6 @@ const OperatorButton: React.FC<IOperatorButton> = ({ id, operator }) => {
 }
 
 export const OpAdd: React.FC = () => <OperatorButton id="add" operator="+" />
-export const OpSubstract: React.FC = () => <OperatorButton id="substract" operator="-" />
+export const OpSubtract: React.FC = () => <OperatorButton id="subtract" operator="-" />
 export const OpMultiply: React.FC = () => <OperatorButton id="multiply" operator="*" />
 export const OpDivide: React.FC = () => <OperatorButton id="divide" operator="/" />

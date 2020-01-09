@@ -5,7 +5,7 @@ import './Buttons/buttons.css'
 
 import { Equals } from "./Buttons/Equals";
 import { Digits } from "./Buttons/Digits";
-import { OpAdd, OpDivide, OpMultiply, OpSubstract } from "./Buttons/Ops";
+import { OpAdd, OpDivide, OpMultiply, OpSubtract } from "./Buttons/Ops";
 import { Decimal } from "./Buttons/Decimal";
 import { Clear } from "./Buttons/Clear";
 import { Display } from "./Display/Display";
@@ -18,7 +18,7 @@ export const App: React.FC = () => {
         <Digits />
         <Decimal />
         <OpAdd />
-        <OpSubstract />
+        <OpSubtract />
         <OpMultiply />
         <OpDivide />
         <Clear />

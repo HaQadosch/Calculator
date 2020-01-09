@@ -11,6 +11,7 @@ import { Status } from "../Store/Slices/statusSlice"
 export const Decimal: React.FC = () => {
   const dispatch: AppDispatch = useDispatch()
   const { state: status } = useSelector(({ status }: RootState) => status)
+  const { value: total } = useSelector(({ total }: RootState) => total)
 
   return (
     <button id="decimal" onClick={ handleClick }>
@@ -29,9 +30,11 @@ export const Decimal: React.FC = () => {
         break
       case Status.FollowUpInput: // The number becomes a float.
       case Status.MaybeNegative:
-        dispatch(appendTotal({
-          value: '.'
-        }))
+        if (!/\./.test(total)) {
+          dispatch(appendTotal({
+            value: '.'
+          }))
+        }
         break
     }
   }

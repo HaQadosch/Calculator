@@ -22,7 +22,7 @@ button#divide {
 button#multiply {
   grid-area: mult;
 }
-button#substract {
+button#subtract {
   grid-area: minus;
 }
 button#add {
