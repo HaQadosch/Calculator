@@ -41,7 +41,6 @@ const Digit: React.FC<IDigit> = ({ value, id, onClick }) => {
 export const Digits: React.FC = () => {
   const dispatch: AppDispatch = useDispatch()
   const { state: status } = useSelector(({ status }: RootState) => status)
-  const { value: total } = useSelector(({ total }: RootState) => total)
 
   return (
     <>
@@ -66,7 +65,7 @@ export const Digits: React.FC = () => {
         dispatch(setState({ state: Status.FollowUpInput }))
         break
       case Status.MaybeNegative:
-        dispatch(setTotal({ value: `-${ total }` }))
+        dispatch(setTotal({ value: `-${ value }` }))
         dispatch(setState({ state: Status.FollowUpInput }))
         break
       default:
